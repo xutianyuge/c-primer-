@@ -1,3 +1,21 @@
 第五章语句主要讲了简单语句、语句作用域、条件语句、迭代语句、跳转语句、try和异常处理。
 由于很多内容较为简单，所以只是提一下要点。
-（1）
+（1）在case语句中省略掉break，可以连续执行若干个case标签。
+（2）如果没有一个case可以匹配上switch的值，程序将紧跟在default后面。
+（3）switch内部变量的定义：
+    如果在某一处一个带有初值的变量位于作用域以外，在另一处变量位于作用域之内，则从前一处跳转到后一处是非法行为。
+    不允许跨过变量的初始化语句直接跳转到变量作用域的另一个位置
+    如果分支需要定义一个初始化的变量，需要把变量定义在块内直接在case后面加{}，从而保证后面的都在作用域外。
+（4）for语句头可以多重定义：变量的基础类型必须相同，这样才可以
+      如果不需要初始化直接放空语句
+      condition为空时候相当于谢了true程序会无限执行下去
+      可以省略for（init-statement;condition;expression）中expression的值，但是需要改变迭代量的值。
+（5）do statement while (condition) statement与condition都不能放空。
+（6）c++有4种跳转语句：while,do while ,for,switch
+(7)break 放在switch中可以中断switch但是不能中断while
+（8）continue只可以出现在for,while,do while循环内部只要当switch嵌套在迭代语句的内部时，才可以使用continue。
+（9）标准异常包括：exception,stdexcept,new文件的bad_alloc，type_info的bgad_cast
+    只能默认初始化exception bad_alloc和bad_cast,不允许为其提供初始值。
+    其他的相反，不允许默认初始化。
+    
+
